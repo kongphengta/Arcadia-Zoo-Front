@@ -1,5 +1,5 @@
 # Site Arcadia Zoo
-Arcadia zoo animalier en Bretagne
+Arcadia Zoo animalier en Bretagne.
 
 ## Environnement de travail
 - PC Windows 10
