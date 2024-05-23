@@ -12019,14 +12019,23 @@ footer .footer {
   color: #0B3B17;
 }
 
-p {
-  color: #0B3B17;
+.figure {
+  position: relative;
 }
-
-h1, .h1 {
-  color: #0B3B17;
+.figure:hover .figure-title {
+  opacity: 1;
 }
-
-h5, .h5 {
-  color: #0B3B17;
+.figure:hover img {
+  filter: brightness(0.6);
+}
+.figure img {
+  transition: all 0.5s;
+}
+.figure .figure-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  opacity: 0;
+  transition: all 0.5s;
 }/*# sourceMappingURL=main.css.map */
