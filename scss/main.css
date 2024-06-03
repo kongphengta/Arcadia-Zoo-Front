@@ -7,7 +7,7 @@
  */
 :root,
 [data-bs-theme=light] {
-  --bs-blue: #4000FF;
+  --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -12038,4 +12038,8 @@ footer .footer {
   transform: translate(-50% -50%);
   opacity: 0;
   transition: all 0.5s;
+}
+
+.form-label {
+  color: #0B6121;
 }/*# sourceMappingURL=main.css.map */
