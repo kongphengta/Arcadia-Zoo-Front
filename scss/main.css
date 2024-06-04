@@ -12022,7 +12022,8 @@ footer .footer {
 .figure {
   position: relative;
 }
-.figure:hover .figure-title {
+.figure:hover .figure-title,
+.figure:hover .action-image-buttons {
   opacity: 1;
 }
 .figure:hover img {
@@ -12039,7 +12040,24 @@ footer .footer {
   opacity: 0;
   transition: all 0.5s;
 }
+.figure .action-image-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: all 0.5s;
+}
 
 .form-label {
   color: #0B6121;
+}
+
+.allréservations a {
+  display: block;
+  color: #0B3B17;
+  padding: 20px;
 }/*# sourceMappingURL=main.css.map */

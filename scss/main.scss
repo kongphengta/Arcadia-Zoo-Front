@@ -65,7 +65,9 @@ footer .footer {
     position: relative;
 
     &:hover {
-        .figure-title {
+
+        .figure-title,
+        .action-image-buttons {
             opacity: 1;
         }
 
@@ -87,8 +89,28 @@ footer .footer {
         transition: all 0.5s;
 
     }
+
+    .action-image-buttons {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: all 0.5s;
+    }
 }
 
 .form-label {
     color: $secondary;
+}
+
+.allréservations {
+    a {
+        display: block;
+        color: $dark;
+        padding: 20px;
+    }
 }
