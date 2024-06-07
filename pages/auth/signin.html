@@ -9,15 +9,21 @@
     <form>
         <div class="mb-3 mt-5">
             <label for="EmailInput" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1">
+            <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.com">
+            <div class="invalid-feedback">
+                Votre mail et le mot de passe ne correspondent pas
+            </div>
         </div>
         <div class="mb-3">
             <label for="PasswordInput" class="form-label">Mot de passe</label>
             <input type="password" class="form-control" id="PasswordInput">
         </div>
-        <button type="submit" class="btn btn-secondary mb-5">Connexion</button>
+        <button type="button" class="btn btn-secondary mb-5" id="btnSignin">Connexion</button>
         <div class="text-center mb-5">
-            <a href="/signup">Vous n'avez pas de compte ? Inscrivez vous ici !</a>
+            <div class="text-center">
+                <a href="/signup">Vous n'avez pas de compte ? Inscrivez vous ici !</a>
+            </div>
+
         </div>
     </form>
 </div>
