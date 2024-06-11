@@ -1,4 +1,19 @@
 const tokenCookieName = "accestoken";
+const RoleCookieName = "role";
+const signoutBtn = document.getElementById('signout-btn');
+
+signoutBtn.addEventListener("click", signout);
+
+function getRole() {
+    return getCookie(RoleCookieName);
+}
+
+function signout() {
+    eraseCookie(tokenCookieName);
+    eraseCookie(RoleCookieName);
+
+    window.location.reload();
+}
 
 function setToken(token) {
     setCookie(tokenCookieName, token, 7);
@@ -35,23 +50,49 @@ function getCookie(name) {
 function eraseCookie(name) {
     document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
-
-// Gestion de la connexion
-// const tokenCookieName = "accesstoken";
-
-// function setToken(token) {
-//     setCookie(tokenCookieName, token, 7);
-// }
-
-// function getToken() {
-//     return getCookie(tokenCookieName);
-// }
 // Savoir si on est connecté
-// function isConnected() {
-//     if (getToken() == null || getToken == undefined) {
-//         return false;
-//     }
-//     else {
-//         return true;
-//     }
-// }
+function isConnected() {
+    if (getToken() == null || getToken == undefined) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+/**
+ * disconnected
+ * connected (admin or client)
+ * - admin
+ * - client
+ */
+
+function showAndHideElementForRoles() {
+    const userConnected = isConnected();
+    const role = getRole();
+
+    let allElementToEdit = document.querySelectorAll("[data-show]");
+    allElementToEdit.forEach(element => {
+        switch (element.dataset.show) {
+            case 'disconnected':
+                if (userConnected) {
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'connected':
+                if (!userConnected) {
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'admin':
+                if (!userConnected || role != "admin") {
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'client':
+                if (!userConnected || role != client) {
+                    element.classList.add("d-none");
+                }
+                break;
+        }
+    })
+}
