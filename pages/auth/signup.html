@@ -6,31 +6,31 @@
 </div>
 
 <div class="container">
-    <form>
+    <form id="formulaireInscription">
         <div class="mb-3 mt-5">
             <label for="NomInput" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="NomInput" placeholder="Votre Nom">
+            <input type="text" class="form-control" id="NomInput" placeholder="Votre Nom" name="nom">
             <div class="invalid-feedback">
                 Le nom est requis.
             </div>
         </div>
         <div class="mb-3">
             <label for="PrenomInput" class="form-label">Prénom</label>
-            <input type="text" class="form-control" id="PrenomInput" placeholder="Votre Prénom">
+            <input type="text" class="form-control" id="PrenomInput" placeholder="Votre Prénom" name="prenom">
             <div class="invalid-feedback">
                 Le prénom est requis.
             </div>
         </div>
         <div class="mb-3">
             <label for="EmailInput" class="form-label">Email</label>
-            <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr">
+            <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="email">
             <div class="invalid-feedback">
                 Votre mail n'est pas au bon format.
             </div>
         </div>
         <div class="mb-3">
             <label for="PasswordInput" class="form-label">Mot de passe</label>
-            <input type="password" class="form-control" id="PasswordInput" placeholder="Votre mot de passe">
+            <input type="password" class="form-control" id="PasswordInput" placeholder="Votre mot de passe" name="mdp">
             <div class="invalid-feedback">
                 Votre mot de passe n'est pas assez robuste : Au moins 8 caractères, comprenant au moins 1 lettre
                 majucule, 1 lettre minuscule, 1 cractère spécial.
@@ -47,6 +47,6 @@
                 Votre de passe n'est pas indentique.
             </div>
         </div>
-        <button type="submit" class="btn btn-secondary mb-5" id="btn-validation-inscription">S'inscrire</button>
+        <button type="button" class="btn btn-secondary mb-5" id="btn-validation-inscription">S'inscrire</button>
     </form>
 </div>
